@@ -1,82 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head lang="en">
-
+<head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width = device-width, user-scalable = yes">
-
-  <title>Trepid Games Homepage</title>
-  <meta name="description" content="Trepid Games Homepage">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trepid Games | Retro Browser Games</title>
+  <meta name="description" content="Play retro browser games from Trepid Games, including Station Infestation – Xtra Slimy, Return to Haunted House, and Wanderer’s Quest.">
   <link rel="icon" type="image/png" sizes="192x192" href="images/eyes-avatar-192x192.png">
-
-  <style>
-    a { color:#ffca37; }
-    a:visited { color:#ffca37; }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background: #000000;
-    }
-
-    .center {
-      padding: 70px 0;
-      text-align: center;
-    }
-
-    .matchlight {
-      opacity: .85;
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      .matchlight {
-        animation: matchlight-flicker 960ms step-end infinite,
-                   matchlight-dip 5.3s step-end infinite;
-      }
-    }
-
-    @keyframes matchlight-flicker {
-      0%, 23%, 49%, 77%, 100% { fill-opacity: .82; }
-      6%, 31%, 56%, 82% { fill-opacity: 1; }
-      11%, 40%, 71%, 88% { fill-opacity: .48; }
-      16%, 36%, 61%, 94% { fill-opacity: .91; }
-      19%, 44%, 66%, 85% { fill-opacity: .64; }
-      27%, 53%, 74%, 91% { fill-opacity: .36; }
-    }
-
-    @keyframes matchlight-dip {
-      0%, 57%, 65%, 100% { opacity: .95; }
-      58%, 63% { opacity: .65; }
-      60% { opacity: .24; }
-    }
-  </style>
-
-  <script src="../src/main/room/screen/FullScreenSetup.js"></script>
-
+  <link rel="stylesheet" href="home.css">
 </head>
 
-<body class="center">
-<img width="382px" src="images/trepid_title.png">
-<svg width="192" height="197" viewBox="0 0 40 41" xmlns="http://www.w3.org/2000/svg"
-     shape-rendering="crispEdges" role="img" aria-label="Trepid Games pixel eyes in orange matchlight">
-  <path class="matchlight" fill="#973e2f" transform="translate(-.5 .5)"
-        d="M16 3H25v1h3v1h2v1h1v1h1v1h1v1h1v1h1v1h1v1h1v2h1v3h1
-           v8h-1v3h-1v2h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v1h-3v1H16
-           v-1h-3v-1h-2v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-2h-1v-3h-1
-           v-8h1v-3h1v-2h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2v-1h3z"/>
-  <g fill="#faede6">
-    <rect x="16" y="20" width="3" height="3"/>
-    <rect x="21" y="20" width="3" height="3"/>
-  </g>
-  <g id="logo-pupils" fill="#000">
-    <rect x="17" y="21" width="1" height="1"/>
-    <rect x="22" y="21" width="1" height="1"/>
-  </g>
-</svg>
-<!-- smegs <p style="font-size:22px;color:#fe933e">Meanwhile, find me on Canva at <a href="https://trepidgames.my.canva.site/">trepidgames.my.canva.site</a> ...</p>-->
-<br>
+<body>
+<header class="masthead wrap">
+  <div class="brand">
+    <img class="wordmark" src="images/homepage/trepid-games.webp" width="587" height="133" alt="Trepid Games">
+    <svg width="192" height="197" viewBox="0 0 40 41" xmlns="http://www.w3.org/2000/svg"
+         shape-rendering="crispEdges" aria-hidden="true">
+      <path class="matchlight" fill="#973e2f" transform="translate(-.5 .5)"
+            d="M16 3H25v1h3v1h2v1h1v1h1v1h1v1h1v1h1v1h1v1h1v2h1v3h1
+               v8h-1v3h-1v2h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v1h-3v1H16
+               v-1h-3v-1h-2v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-2h-1v-3h-1
+               v-8h1v-3h1v-2h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2v-1h3z"/>
+      <g fill="#faede6">
+        <rect x="16" y="20" width="3" height="3"/>
+        <rect x="21" y="20" width="3" height="3"/>
+      </g>
+      <g id="logo-pupils" fill="#000">
+        <rect x="17" y="21" width="1" height="1"/>
+        <rect x="22" y="21" width="1" height="1"/>
+      </g>
+    </svg>
+  </div>
+  <nav aria-label="Main">
+    <a href="#games">Games</a>
+    <a href="https://trepidgames.itch.io/">itch.io <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="intro">
+    <h1>Retro games for the browser</h1>
+    <p>Light a match in a haunted mansion, call in a repair bot on a slime-infested space station, or sail out from a lonely lighthouse.</p>
+  </div>
+
+  <section class="featured" aria-labelledby="featured-title">
+    <div class="featured-copy">
+      <p class="game-meta featured-label">Featured game</p>
+      <h2 id="featured-title">Station Infestation <span>Xtra Slimy</span></h2>
+      <p>A slime outbreak is tearing through the station. Patch broken panels, clear the infestation, and keep Floyd, your robot sidekick, charged long enough to help.</p>
+      <p class="game-meta">Defold · In development</p>
+      <div class="featured-links">
+        <a class="play-button" href="https://trepidgames.itch.io/sixs">Play Xtra Slimy <span aria-hidden="true">↗</span></a>
+        <a href="https://trepidgames.itch.io/sciway">Play the PICO-8 original <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="featured-art">
+      <img src="images/homepage/xtra-slimy.webp" width="320" height="254" alt="">
+    </div>
+  </section>
+
+  <section class="library" id="games" aria-labelledby="games-title">
+    <h2 id="games-title">More games</h2>
+    <div class="game-grid">
+      <article class="game-card">
+        <div class="game-art">
+          <img src="images/homepage/haunted-house.webp" width="536" height="560" alt="The Return to Haunted House title screen with eyes in a pool of matchlight" loading="lazy">
+        </div>
+        <div class="game-copy">
+          <p class="game-meta">PICO-8 · Beta</p>
+          <h3>Return to Haunted House</h3>
+          <p>Strike a match, find the three pieces of the magic urn, and get out before you run out of lives. The crystal ball can reveal the floor or draw the ghost of Zachary Graves.</p>
+          <a href="https://trepidgames.itch.io/haunted" aria-label="Play Return to Haunted House on itch.io">Play on itch.io <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="game-card">
+        <div class="game-art">
+          <img src="images/homepage/wanderers-quest.webp" width="347" height="226" alt="A pixel-art coastline and sea in Wanderer’s Quest" loading="lazy">
+        </div>
+        <div class="game-copy">
+          <p class="game-meta">LÖVE · Engine demo</p>
+          <h3>Wanderer’s Quest I <span>The Sunless Sea</span></h3>
+          <p>Take up a post at Stormbane Lighthouse in a 16-color adventure inspired by <cite>Ultima IV–VI</cite>. Sail skiffs and frigates, or take to the air on a flying carpet.</p>
+          <a href="https://trepidgames.itch.io/wanderer" aria-label="Play the Wanderer’s Quest demo on itch.io">Play the demo <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="game-card">
+        <div class="game-art">
+          <img src="images/homepage/s-man.webp" width="560" height="314" alt="S-Man flying above a suspension bridge in Cosmopolis" loading="lazy">
+        </div>
+        <div class="game-copy">
+          <p class="game-meta">TIC-80 · Beta</p>
+          <h3>S-Man</h3>
+          <p>Duck into a phone booth, take to the skies over Cosmopolis, and haul Luth Lexor’s henchmen to jail. Put the bridge back together before you return to your day job.</p>
+          <a href="https://trepidgames.itch.io/s-man" aria-label="Play S-Man on itch.io">Play on itch.io <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="game-card">
+        <div class="game-art">
+          <img src="images/homepage/station-infestation.webp" width="512" height="512" alt="Four floors of the space station in the original Station Infestation" loading="lazy">
+        </div>
+        <div class="game-copy">
+          <p class="game-meta">PICO-8 · Original beta</p>
+          <h3>Station Infestation</h3>
+          <p>Survive three slimewaves, hack locked doors, and repair the panels that keep the station in orbit.</p>
+          <a href="https://trepidgames.itch.io/sciway" aria-label="Play the original Station Infestation on itch.io">Play the original <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer wrap">
+  <span>Trepid Games</span>
+  <a href="https://trepidgames.itch.io/">Follow on itch.io <span aria-hidden="true">↗</span></a>
+</footer>
+
 <script>
   (() => {
     const pupils = document.getElementById("logo-pupils");
@@ -110,3 +151,4 @@
   })();
 </script>
 </body>
+</html>
